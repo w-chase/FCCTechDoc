@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.heading1{
+    font-size:2rem;
+}
+
+.heading2{
+    font-size:1.5rem;
+}
+
+.heading3{
+    font-size: 1.25rem;
+}
+
+code{
+    font-weight:bold;
+    background-color: rgba(50,50,50,0.2);
+}
+li{
+    margin:0.25rem;
+}
+
+
+#main-doc{
+    grid-area:main-doc;
+    margin:1rem;
+}
+
+.main-section{
+    border-bottom:2px solid #333;
+    padding-bottom:2px;
+}
+
+#manufacturing-img-block{
+    background-color: #333;
+    width:fit-content;
+}
+
+#drug-map{
+    max-width:75%;
+    height: auto;
+}
+
+#manufacturing-map{
+    max-width: 100%;
+}
+
+#body-block{
+    display:grid;
+    grid-template-areas:
+    "nav-bar main-doc";
+    grid-template-columns: 20% 80%;
+    grid-template-rows:auto;
+}
+
+
+/* Navigation Bar */
+#navbar{
+    display:grid;
+    position:fixed;
+    top: 0;
+    left:0;
+    max-width: 20vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(8, auto) auto;    
+}
+
+#logo-block{
+    text-align: center;
+    border-top:#333 solid 2px;
+}
+
+#eve-logo-block{
+    display:inline-block;
+    background-color: #000;
+    padding:0.5rem;
+    border-radius: 8px;
+    max-width: 200px;
+    margin-top: .75rem;
+}
+
+.nav-link{
+    display:inline-block;
+    width: 100%;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.sticky-button{
+    display: none;
+}
+
+.nav-button{
+    border-top:#333 solid 2px;
+}
+.nav-button:hover{
+    background-color: #ccc;
+}
+#nav-button:hover{
+    background-color: #ccc;
+}
+
+#page-topic{
+    font-size: 2rem;
+}
+
+#topic-block{
+    text-align: center;
+}
+
+#navbutton{
+    display:none;
+}
+
+#navbarbutton{
+    display:none;
+}
+
+.slider{
+    grid-area:nav-bar;
+    border-right:#333 solid 2px;
+    
+}
+
+
+
+
+@media only screen and (max-width: 1000px){
+    #body-block{display:block;
+    }
+   
+    .sticky-button{
+        display:block;
+        position: fixed;
+        top:4px;
+        margin-left: 2rem;
+    }
+
+    #navbar {
+        width:0;
+        overflow-x: hidden;
+        transition: 500ms;
+        max-width:25%
+    }
+
+    .nav-link{
+        font-size:1.25rem;
+    }
+
+    .slider{
+        display:none;
+    }
+
+    #navbarbutton{
+        display:block;
+        text-align: center;
+        border-bottom:solid 2px #333;
+    }
+    
+    #navbarbutton:hover{
+        background-color: #ccc;
+    }
+
+    #navbarbutton a{
+        font-size: 1.75rem;
+        text-decoration: none;
+        color: #111;
+    }
+
+    #nav-button{
+        display:block;
+        position: sticky;
+        top:0;
+    }
+
+}
+@media only screen and (max-width:800px){
+    #navbar{
+        max-width: 100%;
+        height:100%;
+        background-color: rgba(112, 111, 111, 0.8);
+    }
+}
+@media only screen and (max-height:660px){
+    #eve-uni-logo-block{
+        width:50%;
+    }
+    #eve-wiki-logo{
+        width:50%;
+    }
+    #eve-logo-block{
+        width: 75%;
+    }
+    #eve-online-logo{
+        width:50%;
+    }
+}
